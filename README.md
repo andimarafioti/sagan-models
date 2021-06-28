@@ -1,1 +1,3 @@
-# sagan-models
+# Pytorch implementation of the [SAGAN](https://arxiv.org/abs/1805.08318v2) model. 
+
+This is as closely as I could follow the [original tensorflow implementation](https://github.com/brain-research/self-attention-gan). I started with the SNGAN implementation by [t-vi](https://github.com/t-vi/) and an attention implementation from [valillon](https://github.com/valillon) I found on the issues of this other [SAGAN implementation for pytorch](https://github.com/heykeetae/Self-Attention-GAN). I adapted the model to SAGAN and the attention module to the original tensorflow code. I think this is a good starting point for anyone trying to use SAGAN for something. 
