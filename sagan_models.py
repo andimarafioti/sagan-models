@@ -218,7 +218,7 @@ class ResDisOptimizedBlock(torch.nn.Module):
         return h + sc
 
 
-class SNResNetProjectionDiscriminator(torch.nn.Module):
+class ResNetDiscriminator(torch.nn.Module):
     def __init__(self, ch=64, n_classes=0, activation=torch.nn.functional.relu):
         super().__init__()
         self.activation = activation
