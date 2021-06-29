@@ -178,14 +178,13 @@ class ResDisBlock(torch.nn.Module):
         h = self.c1(h)
         h = self.activation(h)
         h = self.c2(h)
-        if self.downsample:
-            h = torch.nn.functional.avg_pool2d(h, 2)
         if self.learnable_sc:
             sc = self.c_sc(x)
-            if self.downsample:
-                sc = torch.nn.functional.avg_pool2d(sc, 2)
         else:
             sc = x
+        if self.downsample:
+            h = torch.nn.functional.avg_pool2d(h, 2)
+            sc = torch.nn.functional.avg_pool2d(sc, 2)
         return h + sc
 
 
